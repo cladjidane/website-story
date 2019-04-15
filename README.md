@@ -1,3 +1,3 @@
-* Thème WP promo 2019 COde BZH
+# Thème WP promo 2019 COde BZH
 
 Website Story ... le thème !
