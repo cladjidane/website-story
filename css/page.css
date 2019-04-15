@@ -1,0 +1,35 @@
+.entry-header {
+	background: silver;
+	padding: 40px;
+}
+
+.entry-header h1 {
+	color: white;
+}
+
+.entry-header h2 {
+	color: rgba(0, 0, 0, .5);
+}
+
+.site-main {
+	padding: 60px 20%;
+	overflow: auto;
+}
+
+.site-main h3 {
+	text-align: left;
+}
+.site-main article {
+	width: 65%;
+	float: left;
+}
+
+
+.site-main aside {
+	width: 32%;
+	float: right;
+	background: red;
+	padding: 30px;
+	color: white;
+}
+
