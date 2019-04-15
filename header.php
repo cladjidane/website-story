@@ -25,7 +25,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'website-story' ); ?></a>
 
     <div class="top-header">
-        <a href="/"><img src="http://cbzh-website-story/wp-content/themes/website-story/img/logo-site.png" alt="Site Internet des 30ans du web by Code BZH 2019 !"></a>
+        <a href="/"><img src="<?php echo get_template_directory_uri().'/img/logo-site.png'; ?>" alt="Site Internet des 30ans du web by Code BZH 2019 !"></a>
         <nav>
             <ul>
             <li>LIEN 1</li>

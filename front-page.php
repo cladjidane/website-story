@@ -5,8 +5,8 @@ get_header();
 
 	<div id="primary" class="content-area">
 
-		<header class="entry-header">
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<header class="entry-header-home">
+			<?php include('sections/slides.php'); ?>
 		</header><!-- .entry-header -->
 
 		<main id="main" class="site-main">
@@ -15,11 +15,11 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			// Pour exemple à supprimer
-			echo 'ACCUEIL';
 			include ('sections/timeline.php');
-			// Fin exemple
-			
+			include ('sections/quiz.php');
+			include ('sections/searchbar.php');
+			include ('sections/staff.php');
+			include ('sections/ressources.php');
 
 		endwhile; // End of the loop.
 		?>

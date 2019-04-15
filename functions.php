@@ -132,6 +132,8 @@ function website_story_scripts() {
 
 	wp_enqueue_style( 'website-story-stylepage', get_template_directory_uri() . '/css/page.css');
 
+	wp_enqueue_script( 'website-story-slides', get_template_directory_uri() . '/js/main.js', array(), '9200987', true );
+
 	wp_enqueue_script( 'website-story-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'website-story-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
