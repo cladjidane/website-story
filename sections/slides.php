@@ -1,16 +1,27 @@
+<?php
+
+    $args = array(
+        'post_type' => 'slide',
+    );
+
+    $the_query = new WP_Query( $args );
+
+?>
+
 <div class="cbzh-slides">
+    
+    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+        <div class="cbzh-slide fade">
+        <?php the_post_thumbnail('full'); ?>
+        <div class="overlay"></div>
+        <div class="cbzh-slide_text"><strong><?php the_title(); ?></strong><br /><?php the_content(); ?></div>
+        </div>     
+    <?php endwhile; ?>
 
-    <div class="cbzh-slide fade">
-    <img src="<?php echo get_template_directory_uri(); ?>/img/img1.png" class="cbzh-slide_img">
-    <div class="overlay"></div>
-    <div class="cbzh-slide_text"><strong>WEBSITE STORY</strong><br />Les 30 ans du web !</div>
-    </div>
-
-    <div class="cbzh-slide fade">
-    <img src="<?php echo get_template_directory_uri(); ?>/img/img2.png"class="cbzh-slide_img">
-    <div class="overlay"></div>
-    <div class="cbzh-slide_text"><strong>Code BZH</strong><br />La formation qui envoie du poney !</div>
-    </div>
+    <?php
+        /* Restore original Post Data */
+        wp_reset_postdata();
+    ?>
 
     <a class="cbzh-slides_prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="cbzh-slides_next" onclick="plusSlides(1)">&#10095;</a>
